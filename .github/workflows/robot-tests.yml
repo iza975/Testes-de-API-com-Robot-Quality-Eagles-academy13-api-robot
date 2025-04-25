@@ -47,7 +47,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: https://github.com/iza975/Testes-de-API-com-Robot-Quality-Eagles-academy13-apis-robot
+      url: https://github.com/iza975/Testes-de-API-com-Robot-Quality-Eagles-academy13-apis-robot.git
     steps:
       - name: Setup Pages
         uses: actions/configure-pages@v4
