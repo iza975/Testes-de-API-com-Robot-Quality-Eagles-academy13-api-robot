@@ -1,0 +1,19 @@
+# Pastas de logs e resultados de execução de testes
+/logs
+/results
+
+# Pastas de dependências e configuração do ambiente
+/venv
+*.pyc
+*.pyo
+
+# Arquivos de configuração específicos de IDEs
+.vscode/
+.idea/
+
+# Arquivos do sistema operacional
+Thumbs.db
+.DS_Store
+
+# Outros arquivos temporários
+*.logs
