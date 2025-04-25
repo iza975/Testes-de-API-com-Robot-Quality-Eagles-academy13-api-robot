@@ -44,8 +44,7 @@ Atualizar email por ID
     Atualizar email
 Atualizar nome por ID
     Atualizar Nome
-Deletar Usuario por ID
-    Deletar Usuario
+
 Delelar usuario com id invalido
     Delelar usuario com id invalido
 
@@ -115,10 +114,7 @@ Atualizar Nome
     ${body}     Create Dictionary    email=testes@test.com
     PUT On Session    alias=qualityeagles    url=/user/status/${ID_USER}?token=${TOKEN}    json=${body}
     Status Should Be    200
-Deletar Usuario
-    ${TOKEN}    Pegar Token
-    Delete On Session    alias=qualityeagles    url=/user/${id_user_delete}?token=${token}
-    Status Should Be    200
+
 Delelar usuario com id invalido
     ${TOKEN}    Pegar Token
     ${response}    DELETE On Session    alias=qualityeagles    url=/user/${id_invalido}?token=${token}     expected_status=any

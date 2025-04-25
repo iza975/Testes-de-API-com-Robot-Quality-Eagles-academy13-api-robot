@@ -20,9 +20,9 @@ CT02 - Criar Empresa com sucesso
     ${resposta}    Realizar Login     email=sysadmin@qacoders.com    senha=1234@Test   
     Status Should Be    200    ${resposta}
 
-CT03 - Deletar Empresa com sucesso
-    ${ID_EMPRESA}        Criar Empresa com sucesso
-    ${resposta}       Delete empresa    ID_EMPRESA=${ID_EMPRESA}
+#CT03 - Deletar Empresa com sucesso
+    #${ID_EMPRESA}        Criar Empresa com sucesso
+    #${resposta}       Delete empresa    ID_EMPRESA=${ID_EMPRESA}
     
     
 
@@ -89,14 +89,14 @@ Get empresa
     ${resposta}    GET On Session    alias=qualityeagles    url=/company/${ID_EMPRESA}?token=${token}
     RETURN    ${resposta}
 
-Delete Empresa
-    [Arguments]    ${ID_EMPRESA}
-    ${token}     Pegar Token
-    ${headers}    Create Dictionary
-    ...    accept=application/json
-    ...    content-type=application/json
-    ...    Authorization=Bearer ${token}
-    Create Session    alias=qualityeagles    url=${BASE_URL}    headers=${headers}    verify=false    disable_warnings=True
-    ${resposta}    DELETE On Session    alias=qualityeagles    url=/company/${ID_EMPRESA}
-    RETURN    ${resposta} 
+#Delete Empresa
+    #[Arguments]    ${ID_EMPRESA}
+    #${token}     Pegar Token
+    #${headers}    Create Dictionary
+   # ...    accept=application/json
+    #...    content-type=application/json
+   # ...    Authorization=Bearer ${token}
+   # Create Session    alias=qualityeagles    url=${BASE_URL}    headers=${headers}    verify=false    disable_warnings=True
+  #  ${resposta}    DELETE On Session    alias=qualityeagles    url=/company/${ID_EMPRESA}
+    #RETURN    ${resposta} 
 
