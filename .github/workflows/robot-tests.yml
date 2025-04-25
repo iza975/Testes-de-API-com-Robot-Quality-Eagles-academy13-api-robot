@@ -1,0 +1,37 @@
+name: Robot Framework API Tests
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Run Robot Framework API Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Instalar dependências
+        run: |
+          pip install robotframework
+          pip install robotframework-requests
+          pip install Faker
+          pip install pyyaml
+
+      - name: Executar testes Robot
+        run: |
+          robot --outputdir results/ tests/
+
+      - name: Upload do relatório
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: robot-framework-api-report
+          path: results/
