@@ -1,25 +1,68 @@
-name: Robot Framework Tests
+name: Robot Framework Back Tests
 
-on: [push, pull_request]
+on: [push, workflow_dispatch]
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    name: API Tests Robot
+    runs-on: ubuntu-24.04
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Clonar arquivos do repositorio
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.12'
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
 
-    - name: Install dependencies
-      run: |
-        pip install robotframework
-        pip install -r requirements.txt || echo "Arquivo requirements.txt não encontrado"
+      - name: Instalação das Dependencias
+        run: |
+          pip install robotframework
+          pip install robotframework-requests
+          pip install Faker
+          pip install pyyaml
 
-    - name: Run Robot Tests
-      run: |
-        robot tests/
+      - name: Executando os testes de API do Robot
+        run: |
+          robot --outputdir results/ .
+
+      - name: Test Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: robot-framework-back-report
+          path: results
+
+  deploy:
+    name: Deploy GitHub Pages 🌐
+    runs-on: ubuntu-24.04
+    if: always()
+    needs:
+      - test
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: https://github.com/iza975/Testes-de-API-com-Robot-Quality-Eagles-academy13-apis-robot
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Download Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: robot-framework-back-report
+          path: results/
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: results/
+
+      - name: Deploy to Github Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
