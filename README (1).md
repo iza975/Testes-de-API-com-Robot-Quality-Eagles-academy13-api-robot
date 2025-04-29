@@ -1,4 +1,4 @@
-# 🤖 Testes de API com Robot Framework | Quality Eagles - Academy #13
+Testes de API com Robot Framework | Quality Eagles - Academy #13
 
 ![Robot Tests](https://github.com/iza975/Testes-de-API-com-Robot-Quality-Eagles-academy13-api-robot/actions/workflows/robot-tests.yml/badge.svg)
 
@@ -6,13 +6,13 @@ Este projeto faz parte do programa de formação **QA Coders Academy #13** da QA
 
 ---
 
-## 🚀 Sobre o Projeto
+ Sobre o Projeto
 
 O objetivo é validar os endpoints da API através de testes automatizados com Robot Framework. Os testes foram organizados por funcionalidades, incluindo autenticação, operações com usuários e empresas.
 
 ---
 
-## 🔐 Autenticação
+ Autenticação
 
 - Login com dados válidos  
 - Login com campos vazios ou inválidos  
@@ -20,7 +20,7 @@ O objetivo é validar os endpoints da API através de testes automatizados com R
 
 ---
 
-## 👤 Usuário (User)
+Usuário (User)
 
 - Listar usuários  
 - Buscar usuário por ID  
@@ -29,7 +29,7 @@ O objetivo é validar os endpoints da API através de testes automatizados com R
 
 ---
 
-## 🏢 Empresa (Company)
+Empresa (Company)
 
 - Criar empresa  
 - Listar e contar empresas  
@@ -38,7 +38,7 @@ O objetivo é validar os endpoints da API através de testes automatizados com R
 
 ---
 
-## ✅ Validações Realizadas
+Validações Realizadas
 
 - Códigos de status HTTP esperados (`200`, `201`, `403`)  
 - Mensagens específicas no corpo da resposta  
@@ -46,8 +46,7 @@ O objetivo é validar os endpoints da API através de testes automatizados com R
 - Verificação de campos obrigatórios e dados inválidos  
 
 ---
-
-## 📁 Estrutura do Projeto
+ Estrutura do Projeto
 
 ```
 Testes-de-API-com-Robot/
@@ -67,31 +66,29 @@ Testes-de-API-com-Robot/
 
 ---
 
-## ▶️ Como Executar os Testes
+Como Executar os Testes
 
-### Pré-requisitos:
+Pré-requisitos:
 - Python 3.12 ou superior  
 - Robot Framework instalado  
-
-### Comandos:
+ Comandos:
 ```bash
 pip install robotframework
 robot tests/
 ```
 
 ---
-
-## 📦 Execução Automática com GitHub Actions
+Execução Automática com GitHub Actions
 
 A cada push na branch `master`, os testes são executados automaticamente via GitHub Actions.  
 Confira o status pelo badge no topo do README ou [clique aqui para ver a execução](https://github.com/iza975/Testes-de-API-com-Robot-Quality-Eagles-academy13-api-robot/actions).
 
 ---
 
-## 👩‍💻 Desenvolvido por
+ Desenvolvido por
 
-**Sônia Izabel Wicki**  
-Aluna QA Coders Academy #13  
-📍 Almirante Tamandaré - PR  
+Sônia Izabel Wicki 
+Participante da QA Coders Academy 13  
+Almirante Tamandaré - PR  
 
-💡 Acredito que a tecnologia transforma, a qualidade sustenta e o aprendizado contínuo impulsiona a evolução.
+💡 Acredito que a tecnologia transforma, a qualidade é fundamental e o aprendizado contínuo impulsiona a evolução.
