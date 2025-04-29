@@ -1,8 +1,8 @@
-Testes de API com Robot Framework | Quality Eagles - Academy #13
+Testes de API com Robot Framework | Quality Eagles - Academy 13
 
 ![Robot Tests](https://github.com/iza975/Testes-de-API-com-Robot-Quality-Eagles-academy13-api-robot/actions/workflows/robot-tests.yml/badge.svg)
 
-Este projeto faz parte do programa de formação **QA Coders Academy #13** da QAcoders, com foco na criação e execução de testes de API utilizando o **Robot Framework**.
+Este projeto faz parte do programa de formação **QA Coders Academy 13** da QAcoders, com foco na criação e execução de testes de API utilizando o **Robot Framework**.
 
 ---
 
