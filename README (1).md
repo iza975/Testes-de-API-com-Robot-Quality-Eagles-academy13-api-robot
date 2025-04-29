@@ -80,15 +80,15 @@ robot tests/
 ---
 Execução Automática com GitHub Actions
 
-A cada push na branch `master`, os testes são executados automaticamente via GitHub Actions.  
+A cada push na branch `main`, os testes são executados automaticamente via GitHub Actions.  
 Confira o status pelo badge no topo do README ou [clique aqui para ver a execução](https://github.com/iza975/Testes-de-API-com-Robot-Quality-Eagles-academy13-api-robot/actions).
 
 ---
 
- Desenvolvido por
+Desenvolvido por
 
 Sônia Izabel Wicki 
 Participante da QA Coders Academy 13  
 Almirante Tamandaré - PR  
 
-💡 Acredito que a tecnologia transforma, a qualidade é fundamental e o aprendizado contínuo impulsiona a evolução.
+Acredita que a tecnologia transforma, a qualidade é fundamental e o aprendizado contínuo impulsiona a evolução.
